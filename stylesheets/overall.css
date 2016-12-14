@@ -1,0 +1,17 @@
+﻿/* FONTS */
+@font-face {
+    font-family: "Oganesson";
+    src: url('../fonts/bikoreg.otf'),
+    url('../fonts/Oganesson.eot'); /* IE */
+}
+
+#fader {
+	transition:0.5s;
+	
+}
+.fader {
+	opacity:0;
+}
+.faded {
+	opacity:1;
+}

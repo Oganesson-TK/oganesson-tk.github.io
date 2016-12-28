@@ -1,37 +1,6 @@
-﻿<!DOCTYPE html>
-<html>
-
-<head>
-<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-<meta name="viewport" content="initial-scale=1">
-<title>Oganesson</title>
-<link rel="stylesheet" href="stylesheets/overall.css" type="text/css" />
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-<script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
-</head>
-<body oncontextmenu="return false;">
-<div class="body">
-<p id="fader" class="header" style="">Oganesson</p>
-<hr>
-<div id="nosight" class="nosight">
-<p class="textcenter">It all starts in time.</p>
-<div style="width:100%;font-size:40px" id="nosight" class="textcenter">
-
-<!-- Hey. Would you say something's... off here? -->
-<!-- Well? -->
-
-<div id="clockdiv" class="textcenter">
-  <span class="days"></span> : <span class="hours"></span> : <span class="minutes"></span> : <span class="seconds"></span>
-</div>
-</div>
-</div>
-</div>
-<script>
-// FADE IN
 var d = document.getElementById("nosight");
 setTimeout(function(){ d.className += " sight"; }, 1000);
 
-// TIMER (I MARKED THE END DATE)
 function getTimeRemaining(endtime) {
   var t = Date.parse(endtime) - Date.parse(new Date());
   var seconds = Math.floor((t / 1000) % 60);
@@ -75,14 +44,9 @@ function initializeClock(id, endtime) {
 // OR
 // var d = new Date("2015-03-25");
 
-// END DATE.
-var deadline = new Date("2019-06-01");
+var deadline = new Date("2016-12-30");
 
-/* 
-
-OLD, FOR CUSTOM TIMES. DOES NOT FULLY WORK.
-
-// if there's a cookie with the name myClock, use that value as the deadline
+/* // if there's a cookie with the name myClock, use that value as the deadline
 if(document.cookie && document.cookie.match('myClock')){
   // get deadline value from cookie
   var deadline = document.cookie.match(/(^|;)myClock=([^;]+)/)[2];
@@ -100,7 +64,3 @@ else{
   document.cookie = 'myClock=' + deadline + '; path=/; domain=.yourdomain.com';
 } */
 initializeClock('clockdiv', deadline);
-</script>
-</body>
-
-</html>
